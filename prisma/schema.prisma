@@ -14,3 +14,30 @@ model DrugLog {
   date       DateTime @default(now())
   notes      String?
 }
+
+
+/* Adding new model below for a feature. */
+model Medication {
+  id           Int       @id @default(autoincrement())
+  name         String
+  dosage       String?
+  timesPerDay  Int       @default(1)
+  startDate    DateTime  @default(now())
+  expiryDate   DateTime?
+  notes        String?
+  createdAt    DateTime  @default(now())
+  doseLogs     DoseLog[]
+  doseTimes   String[]  @default([])
+
+}
+
+model DoseLog {
+  id            Int        @id @default(autoincrement())
+  medicationId  Int
+  date          DateTime   // store date-only normalized to midnight (UTC)
+  takenCount    Int        @default(0)
+
+  medication    Medication @relation(fields: [medicationId], references: [id])
+
+  @@unique([medicationId, date]) // one row per med per day
+}
