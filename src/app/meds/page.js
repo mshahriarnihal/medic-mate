@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-
+ 
 
 /* adding this part for the CapsuleButton */
 function CapsuleButton({ taken, required, onMark }) {
