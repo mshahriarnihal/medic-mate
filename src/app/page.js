@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-
+import Link from 'next/link';
 export default function Home() {
   const [logs, setLogs] = useState([]);
   const [drugName, setDrugName] = useState('');
@@ -80,7 +80,7 @@ export default function Home() {
               <button className="btn" type="submit" disabled={loading}>
                 {loading ? 'Saving…' : 'Save log'}
               </button>
-              <a href="/meds" className="btn btn--ghost" style={{ marginLeft: 10 }}>Medication Schedule →</a>
+              <Link href="/meds" className="btn btn--ghost" style={{ marginLeft: 10 }}>Medication Schedule →</Link>
             </div>
           </form>
 
