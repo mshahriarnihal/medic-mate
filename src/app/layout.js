@@ -1,4 +1,6 @@
 import "./globals.css";
+import Link from 'next/link';
+
 
 export const metadata = {
   title: "MedicMate",
@@ -22,8 +24,8 @@ export default function RootLayout({ children }) {
           <span className="brand__name">MedicMate</span>
         </div>
         <nav className="nav">
-          <a href="/" className="nav__link">Reaction Logger</a>
-          <a href="/meds" className="nav__link">Medication Schedule</a>
+          <Link href="/" className="nav__link">Reaction Logger</Link>
+          <Link href="/meds" className="nav__link">Medication Schedule</Link>
         </nav>
       </header>
 
