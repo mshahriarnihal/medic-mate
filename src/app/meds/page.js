@@ -1,5 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+
 
 /* adding this part for the CapsuleButton */
 function CapsuleButton({ taken, required, onMark }) {
@@ -171,7 +173,7 @@ export default function MedsPage() {
 
     return (
         <div style={{ maxWidth: 980, margin: '40px auto', padding: 24 }}>
-            <a href="/" className="link-soft">← Back to Reaction Logger</a>
+            <Link href="/" className="link-soft">← Back to Reaction Logger</Link>
             <h1 className="title-xl" style={{ marginTop: 8 }}>Medication Schedule & Adherence</h1>
             <p className="muted">Add your meds, planned dose times, and see expiry reminders. </p>
 
