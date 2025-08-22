@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       <main className="shell">{children}</main>
 
       <footer className="shell footer">
-        <div>Built with Next.js, Prisma & PostgreSQL</div>
+        <div>© 2025 All rights reserved. A Mubasshir Al Shahriar Product. </div>
       </footer>
       </body>
       </html>
